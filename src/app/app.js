@@ -1,6 +1,6 @@
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
-import DefaultState from './default'
+import { DefaultState, DefaultCtrl } from './default'
 
 import '../style/app.css'
 
@@ -11,9 +11,10 @@ let app = () => {
   }
 }
 
-const MODULE_NAME = 'app'
+const MODULE_NAME = 'DefaultState.Controller'
 
-angular.module(MODULE_NAME, [])
+angular.module('app', [])
+  .controller('DefaultState.Controller', DefaultCtrl)
   .config(($stateProvider) => {
     $stateProvider
        .state(DefaultState.name, DefaultState)
