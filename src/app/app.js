@@ -2,6 +2,7 @@ import angular from 'angular'
 import uiRouter from 'angular-ui-router'
 import { DefaultState, DefaultCtrl } from './default'
 import { AwwState, AwwCtrl, AwwService } from './aww'
+import directive from './thumb'
 
 import '../style/app.css'
 
