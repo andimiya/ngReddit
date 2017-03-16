@@ -2,7 +2,6 @@ import angular from 'angular'
 import uiRouter from 'angular-ui-router'
 import { DefaultState, DefaultCtrl } from './default'
 import { AwwState, AwwCtrl, AwwService } from './aww'
-import directive from './thumb'
 
 import '../style/app.css'
 
@@ -15,7 +14,7 @@ let app = () => {
 
 const MODULE_NAME = 'app'
 
-angular.module(MODULE_NAME, [uiRouter])
+angular.module(MODULE_NAME, ['ui.router'])
   .directive('app', app)
   .controller('DefaultCtrl', DefaultCtrl)
   .controller('AwwCtrl', AwwCtrl)
