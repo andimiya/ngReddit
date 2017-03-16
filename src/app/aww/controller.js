@@ -1,5 +1,5 @@
 export const AwwCtrl = class AwwCtrl {
   constructor () {
-    this.title = 'Aww Controller'
+    this.title = 'Aww Title from the Controller'
   }
 }

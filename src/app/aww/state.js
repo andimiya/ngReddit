@@ -4,6 +4,6 @@ export const AwwState = {
   name: 'aww',
   url: '/aww',
   template,
-  controller: 'awwCtrl',
+  controller: 'AwwCtrl',
   controllerAs: 'aww'
 }
