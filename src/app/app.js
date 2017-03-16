@@ -15,7 +15,7 @@ const MODULE_NAME = 'app'
 
 angular.module(MODULE_NAME, ['ui.router'])
   .directive('app', app)
-  .controller(DefaultState.Controller, DefaultCtrl)
+  .controller('DefaultCtrl', DefaultCtrl)
   .config(($stateProvider) => {
     $stateProvider
        .state(DefaultState.name, DefaultState)
