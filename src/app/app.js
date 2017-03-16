@@ -11,10 +11,11 @@ let app = () => {
   }
 }
 
-const MODULE_NAME = 'DefaultState.Controller'
+const MODULE_NAME = 'app'
 
-angular.module('app', [])
-  .controller('DefaultState.Controller', DefaultCtrl)
+angular.module(MODULE_NAME, ['ui.router'])
+  .directive('app', app)
+  .controller(DefaultState.Controller, DefaultCtrl)
   .config(($stateProvider) => {
     $stateProvider
        .state(DefaultState.name, DefaultState)
