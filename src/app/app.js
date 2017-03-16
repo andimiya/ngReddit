@@ -1,6 +1,6 @@
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
-// import DefaultState from 
+import DefaultState from './default'
 
 import '../style/app.css'
 
