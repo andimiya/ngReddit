@@ -15,7 +15,7 @@ let app = () => {
 
 const MODULE_NAME = 'app'
 
-angular.module(MODULE_NAME, ['ui.router'])
+angular.module(MODULE_NAME, [uiRouter])
   .directive('app', app)
   .controller('DefaultCtrl', DefaultCtrl)
   .controller('AwwCtrl', AwwCtrl)
