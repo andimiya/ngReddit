@@ -3,9 +3,20 @@ export const AwwCtrl = ['$scope', 'aww', class AwwCtrl {
     $scope.posts = []
     this.title = 'Aww Title from the Controller'
     AwwService.getPosts()
-      .then(posts => {
-        console.log(posts, 'posts')
-        $scope.posts = res.data.children
-      })
+      .then( ({
+        status,
+        data: {
+          data: {
+            children
+          }
+        }
+      }) => {
+        if( status !== 200) {
+          $scope.error = `Error fetching /r/aww.json\nStatus: ${status}`
+        }
+        $scope.posts = children
+          .filter( child => child.data.preview)
+          .map( child => child.data)
+        })
   }
 }]
