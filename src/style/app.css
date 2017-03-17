@@ -25,3 +25,8 @@ footer {
   max-height: 150px;
   max-width: 150px
 }
+
+.post-thumb-large {
+  max-height: 300px;
+  max-width: 300px
+}
