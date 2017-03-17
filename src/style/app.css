@@ -20,3 +20,8 @@ footer {
   text-align: center;
   font-size: 0.8em;
 }
+
+.post-thumb {
+  max-height: 150px;
+  max-width: 150px
+}
