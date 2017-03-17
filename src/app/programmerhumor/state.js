@@ -1,6 +1,6 @@
 const template = require('./template.html')
 
-export const AwwState = {
+export const PgHumorState = {
   name: 'programmerhumor',
   url: '/programmerhumor',
   template,
