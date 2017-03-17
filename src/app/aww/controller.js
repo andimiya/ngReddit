@@ -3,7 +3,7 @@ export const AwwCtrl = ['$scope', 'aww', class AwwCtrl {
     $scope.posts = []
     this.title = 'Aww Title from the Controller'
     AwwService.getPosts()
-      .then( ({
+      .then(({
         status,
         data: {
           data: {
@@ -11,12 +11,12 @@ export const AwwCtrl = ['$scope', 'aww', class AwwCtrl {
           }
         }
       }) => {
-        if( status !== 200) {
+        if (status !== 200) {
           $scope.error = `Error fetching /r/aww.json\nStatus: ${status}`
         }
         $scope.posts = children
-          .filter( child => child.data.preview)
-          .map( child => child.data)
-        })
+          .filter(child => child.data.preview)
+          .map(child => child.data)
+      })
   }
 }]
