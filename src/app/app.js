@@ -1,7 +1,8 @@
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
 import { DefaultState, DefaultCtrl } from './default'
-import { AwwState, AwwCtrl, AwwService } from './aww'
+import { AwwServiceName, AwwState, AwwCtrl, AwwService } from './aww'
+import { ThumbName, Thumb } from './thumb'
 
 import '../style/app.css'
 
@@ -16,9 +17,11 @@ const MODULE_NAME = 'app'
 
 angular.module(MODULE_NAME, ['ui.router'])
   .directive('app', app)
+  .directive(ThumbName, Thumb)
   .controller('DefaultCtrl', DefaultCtrl)
   .controller('AwwCtrl', AwwCtrl)
-  .service('AwwService', AwwService)
+  .controller('AwwCtrl', AwwCtrl)
+  .service(AwwServiceName, AwwService)
   .config(($stateProvider) => {
     $stateProvider
        .state(DefaultState.name, DefaultState)
